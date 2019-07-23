@@ -1,0 +1,19 @@
+main {
+    background: rgb( 195, 195, 195);
+    border: 2px solid black;
+    min-height: 70vh;
+    margin-bottom: 2em;
+    text-align: center;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+
+
+#content {
+    max-width: 50em;
+    display: inline-block;
+    line-height: 1.4;
+    text-align: left;
+    
+}
