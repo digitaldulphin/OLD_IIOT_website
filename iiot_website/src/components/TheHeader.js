@@ -17,10 +17,12 @@ class TheHeader extends Component {
     render() {
     return (
       <header>
-        <h1> Industrial Internet Of Things - Mohawk College</h1>
+ 
+        <h1> <Link to ='/'id ="homeLink" > Industrial Internet Of Things Laboratory </Link> - Mohawk College</h1>
         <nav> 
-            <Link to ='/'    > About Us </Link>
+            <Link to ='/'    > About </Link>
             <Link to = '/Projects' > Projects </Link>
+            <Link to = '/People' > People </Link>
             <Link to = '/Blog'   > Blog </Link>
             <Link to = '/Events'   > Events </Link>    
             </nav>        

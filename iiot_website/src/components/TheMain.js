@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 
-import AboutUs from './AboutUs.js'
+import About from './About.js'
 import Events from './Events.js'
 import Blog from './Blog.js'
+import People from './People.js'
 import Projects from './Projects.js'
   import Project_1 from './projects/Project_1.js'
   import Project_2 from './projects/Project_2.js'
@@ -27,10 +28,11 @@ class TheMain extends Component {
     return (
       <main>
           <Switch>
-          <Route exact path='/' render={(props) => <AboutUs {...props}  />}/>  
+          <Route exact path='/' render={(props) => <About {...props}  />}/>  
           <Route path='/Projects'  render={(props) => <Projects {...props}   />} />
               <Route path='/Project_1'  render={(props) => <Project_1 {...props}   />} />
               <Route path='/Project_2'  render={(props) => <Project_2 {...props}   />} />
+          <Route path='/People' render={(props) => <People {...props}   />} />
           <Route path='/Blog' render={(props) => <Blog {...props}   />} />
           <Route path='/Events' render={(props) => <Events {...props}  />} />        
           <Route render={() => (
