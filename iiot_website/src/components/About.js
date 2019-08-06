@@ -11,58 +11,55 @@ class About extends Component {
   render() {
     return (
         <div id = 'About'>
-                      
-            <Slideshow />
+
+            <Slideshow />  
+            
             <br />
             <div id = 'Document'>
             <h2> About </h2>
 
+            
+              <p> 
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate corporis voluptatem a optio voluptas illum laborum possimus iure aspernatur? Veniam cupiditate hic porro nobis rem at alias debitis sint deserunt.
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate corporis voluptatem a optio voluptas illum laborum possimus iure aspernatur? Veniam cupiditate hic porro nobis rem at alias debitis sint deserunt.
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate corporis voluptatem a optio voluptas illum laborum possimus iure aspernatur? Veniam cupiditate hic porro nobis rem at alias debitis sint deserunt.
+              </p>
+              <img src = {require('../images/goose.jpg')} id = 'gooseimg' alt = 'image of lab or building' ></img> 
+              <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate corporis voluptatem a optio voluptas illum laborum possimus iure aspernatur? Veniam cupiditate hic porro nobis rem at alias debitis sint deserunt.
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate corporis voluptatem a optio voluptas illum laborum possimus iure aspernatur? Veniam cupiditate hic porro nobis rem at alias debitis sint deserunt.
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate corporis voluptatem a optio voluptas illum laborum possimus iure aspernatur? Veniam cupiditate hic porro nobis rem at alias debitis sint deserunt.
+              </p>
+              <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate corporis voluptatem a optio voluptas illum laborum possimus iure aspernatur? Veniam cupiditate hic porro nobis rem at alias debitis sint deserunt.
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate corporis voluptatem a optio voluptas illum laborum possimus iure aspernatur? Veniam cupiditate hic porro nobis rem at alias debitis sint deserunt.
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate corporis voluptatem a optio voluptas illum laborum possimus iure aspernatur? Veniam cupiditate hic porro nobis rem at alias debitis sint deserunt.
+              </p>
+       
+            </div>
+            <br />
+            <div id = 'Document'>
+                <h2> Where ? </h2> 
 
-              <p> 
+                <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate corporis voluptatem a optio voluptas illum laborum possimus iure aspernatur? Veniam cupiditate hic porro nobis rem at alias debitis sint deserunt.
-              </p>
-              <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate corporis voluptatem a optio voluptas illum laborum possimus iure aspernatur? Veniam cupiditate hic porro nobis rem at alias debitis sint deserunt.
-              </p>
-              <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate corporis voluptatem a optio voluptas illum laborum possimus iure aspernatur? Veniam cupiditate hic porro nobis rem at alias debitis sint deserunt.
-              </p>
-              <p> 
+               </p>               
+               <img src = {require('../images/goose.jpg')} id = 'gooseimg' alt = 'image of lab or building' ></img> 
+            </div>
+
+            <br />
+            <div id = 'Document'>
+                <h2> How to get involved ? </h2> 
+
+                <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate corporis voluptatem a optio voluptas illum laborum possimus iure aspernatur? Veniam cupiditate hic porro nobis rem at alias debitis sint deserunt.
-              </p>
-              <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate corporis voluptatem a optio voluptas illum laborum possimus iure aspernatur? Veniam cupiditate hic porro nobis rem at alias debitis sint deserunt.
-              </p>
-              <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate corporis voluptatem a optio voluptas illum laborum possimus iure aspernatur? Veniam cupiditate hic porro nobis rem at alias debitis sint deserunt.
-              </p>
-              <p> 
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate corporis voluptatem a optio voluptas illum laborum possimus iure aspernatur? Veniam cupiditate hic porro nobis rem at alias debitis sint deserunt.
-              </p>
-              <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate corporis voluptatem a optio voluptas illum laborum possimus iure aspernatur? Veniam cupiditate hic porro nobis rem at alias debitis sint deserunt.
-              </p>
-              <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate corporis voluptatem a optio voluptas illum laborum possimus iure aspernatur? Veniam cupiditate hic porro nobis rem at alias debitis sint deserunt.
-              </p>
-              <p> 
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate corporis voluptatem a optio voluptas illum laborum possimus iure aspernatur? Veniam cupiditate hic porro nobis rem at alias debitis sint deserunt.
-              </p>
-              <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate corporis voluptatem a optio voluptas illum laborum possimus iure aspernatur? Veniam cupiditate hic porro nobis rem at alias debitis sint deserunt.
-              </p>
-              <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate corporis voluptatem a optio voluptas illum laborum possimus iure aspernatur? Veniam cupiditate hic porro nobis rem at alias debitis sint deserunt.
-              </p>
-              <p> 
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate corporis voluptatem a optio voluptas illum laborum possimus iure aspernatur? Veniam cupiditate hic porro nobis rem at alias debitis sint deserunt.
-              </p>
-              <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate corporis voluptatem a optio voluptas illum laborum possimus iure aspernatur? Veniam cupiditate hic porro nobis rem at alias debitis sint deserunt.
-              </p>
-              <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate corporis voluptatem a optio voluptas illum laborum possimus iure aspernatur? Veniam cupiditate hic porro nobis rem at alias debitis sint deserunt.
-              </p>
+               </p>               
+               <img src = {require('../images/goose.jpg')} id = 'gooseimg' alt = 'image of lab or building' ></img> 
+;
             </div>
 
         </div>

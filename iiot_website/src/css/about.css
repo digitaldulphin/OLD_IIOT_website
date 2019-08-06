@@ -17,10 +17,15 @@
     max-width: 60em;
     text-align: left;
 
-    background-color: rgb(22,22,22, 0.5);
-    border: 2px solid rgb(22,22,22, 0.5);
     padding-left: 0.3em;
     padding-right: 0.3em;
     padding-top: 1em;
     padding-bottom: 0.3em;
+}
+
+
+#gooseimg {
+    height: auto;
+    width: 20em;
+    float: right;
 }

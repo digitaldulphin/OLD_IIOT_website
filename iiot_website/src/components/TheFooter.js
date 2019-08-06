@@ -22,7 +22,12 @@ class TheFooter extends Component {
         </div>
         <div id = 'fdiv'>
           <h4> Connect </h4>
-          <div><a href="#" className ="fa fa-twitter"></a>  <a href="#" className ="fa fa-facebook"></a>   <a href="#" className="fa fa-linkedin"></a> <a href="#" className="fa fa-instagram"></a>  </div>
+          <div id = 'SocialMediaIcons'>
+            <a href="#" className ="fa fa-twitter"></a> 
+            <a href="#" className ="fa fa-facebook"></a> 
+            <a href="#" className="fa fa-linkedin"></a> 
+            <a href="#" className="fa fa-instagram"></a>  
+          </div>
         </div>
         <div id = 'fdiv'>
           <img src = {require('../images/mohawkLogo.png')} alt="Mohawk College logo." height="50"  ></img>

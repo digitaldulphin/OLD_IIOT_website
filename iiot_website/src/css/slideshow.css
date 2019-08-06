@@ -51,12 +51,13 @@
 
 /* Caption text */
 #SlideText {
+  position: absolute;
+  bottom: 0;
   color: white;
   /*background-image:  linear-gradient(to bottom, #ffffff 0%, #000000 20%);*/
   background-color: rgb(22,22,22, 0.5);
-  border-bottom: 2px solid rgb(22,22,22, 0.5);
-  border-top: 2px solid rgb(22,22,22, 0.5);
-  border-left: 2px solid rgb(22,22,22, 0.5);
+  border: 2px solid rgb(22,22,22, 0.5);
+  width: 100%;
   min-height: 10vh;
   font-size: 1em;  
   display: block;

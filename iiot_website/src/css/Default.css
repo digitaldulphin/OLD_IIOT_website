@@ -1,14 +1,22 @@
-	  /* Style all font awesome icons */
-    .fa {
-      padding: 0.6em;
-      font-size: 1.5em;
-      width: 1em;
+    /* Style all font awesome icons */
+  
+  #SocialMediaIcons {
+    text-align: center;
+  }
+  
+  .fa {
+      padding: 1em;
+      font-size: 1em;
+      opacity: 0.7;
       text-align: center;
       text-decoration: none;
       border-radius: 50%;
+      margin: 0.3em;
+      
   }
   .fa:hover {
-      opacity: 0.7;
+      opacity: 1;
+      border: 1px solid white;
   }
   .fa-facebook {
       background: #3B5998;
@@ -34,10 +42,11 @@
 
 body {
   background-image: url('..//images/circuit_board_edited.jpg');
-  background-repeat: repeat;
-  /*background-image: url('..//images/SheetMetal.jpg');
-  background-repeat: repeat; */
-  
+  /*background-repeat: repeat; */
+  /* background-image: url('..//images/SheetMetal.jpg');
+  background-repeat: repeat;*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   font-family: Arial;
   color: white;
   padding: 0;  
@@ -91,6 +100,7 @@ nav a:hover {
   margin-left:2em;
   margin-top: 1em;
   margin-bottom: 1em;
+  
 }
  
 
