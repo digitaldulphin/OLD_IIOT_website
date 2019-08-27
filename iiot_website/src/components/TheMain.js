@@ -13,6 +13,7 @@ import {
   BrowserRouter as Router,
   Route,
   Link,
+  NavLink,
   Redirect,
   Switch,
 } from 'react-router-dom';

@@ -20,17 +20,11 @@ class TheFooter extends Component {
           <h4>Contact</h4>
           <div>mohawkIOT@mohawkcollege.ca</div>
         </div>
-        <div id = 'fdiv'>
-          <h4> Connect </h4>
-          <div id = 'SocialMediaIcons'>
-            <a href="#" className ="fa fa-twitter"></a> 
-            <a href="#" className ="fa fa-facebook"></a> 
-            <a href="#" className="fa fa-linkedin"></a> 
-            <a href="#" className="fa fa-instagram"></a>  
-          </div>
-        </div>
-        <div id = 'fdiv'>
-          <img src = {require('../images/mohawkLogo.png')} alt="Mohawk College logo." height="50"  ></img>
+      
+        <div id = 'fdiv'>          
+            <a href = 'https://www.mohawkcollege.ca/' id = 'MohawkCollegeLink' title = "Go to Mohawk College Home Page." >
+              <img src = {require('../images/mohawkLogo.png')} alt="Mohawk College logo." height="50"  ></img>
+            </a>
         </div>
         <div id = 'fdiv' className='signature'>          
             This website was constructed by Norman L. Potts.        
