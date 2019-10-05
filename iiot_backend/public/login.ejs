@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+#LoginApp {
+  text-align:center; 
+}	
+#LoginApp .form-group { 
+  margin-bottom: 1em; 
+}
+#LoginApp legend { 
+  margin-bottom: 1em; 
+  font-weight: bold; 
+}
+body { 
+  background-color: #66b3ff;
+  color: black; 
+  font-family: "Arial", "Helvetica", "Comic Sans MS", "Comic Sans"; 
+  text-align: center; 
+}
+#AppContainer { 
+  padding: 4em;
+  display: block; 
+  margin-top: 10vh; 
+  margin-left: 1em; 
+  margin-right: 1em; 
+  margin-bottom: 5vh;
+  max-width: 90vw;
+  background-color: white;
+  border: 5px solid black;
+  border-radius: 3em;
+  display: inline-block; 
+}
+
+
+</style>
+</head>
+<body>
+ 		 
+	<div id ="AppContainer"> 
+		<div id = "LoginApp">
+			<form method = "post" action="doLoginPlz/">
+				<legend> Login For IIOT website</legend>		
+			<% if ( success_msg ) { %> <div> <%= success_msg %> </div> <% } %>			
+			<% if ( error_msg) { %> <div> <%= error_msg %> </div> <% } %>
+			<% if (error) { %> <div> <%= error %> </div> <% } %>
+			<div class="form-group">
+				<br />
+				<label For = "Email"> Email </label>
+				<input type = "text" id="email" name ="username" maxLength = "64" autoFocus 			
+				<% if (Given_Email) { %>
+					value ="<%= Given_Email %>" ></input>
+				<% } else {%>
+					value ="" ></input>
+				<% } %>				
+			</div>		
+			<div class="form-group">
+				<br />
+				<label For ="Password"> Password </label>
+				<input type = "password" id="password" name = "password" maxLength = "21" ></input>
+			</div>						
+		<input type = 'Submit' value = 'Login' readOnly></input>
+		</form>
+		<br /><br />
+		<button> Forgot my password </button>
+		</div>
+	</div>		 	
+</body>
+</html>

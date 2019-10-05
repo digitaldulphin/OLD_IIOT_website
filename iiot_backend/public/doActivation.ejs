@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+#LoginApp {
+  text-align:center; 
+  display: inline-block;
+  max-width:60vw;
+}	
+#LoginApp .form-group { 
+  margin-bottom: 1em; 
+}
+#LoginApp legend { 
+  margin-bottom: 1em; 
+  font-weight: bold; 
+}
+body { 
+  background-color: rgb(63,72,204);
+  color: black; 
+  font-family: "Arial", "Helvetica", "Comic Sans MS", "Comic Sans"; 
+  text-align: center; 
+}
+#AppContainer { 
+  padding: 1em;
+  display: block; 
+  margin-top: 10vh; 
+  margin-left: 1em; 
+  margin-right: 1em; 
+  margin-bottom: 5vh;
+  max-width: 90vw;
+  background-color: rgb(153,217,234);
+  border: 5px solid black;
+  border-radius: 3em;
+  display: inline-block; 
+}
+
+#token{
+  display: none;
+}
+#LoginApp p {
+  
+  text-align: left;
+  
+}
+
+#LoginApp ul {
+  
+  text-align: left;
+  
+}
+.center {
+  text-align: center;
+}
+#match {
+  display: inline-block;
+  border-radius: 0.25em;
+  padding: 0.0em 0.25em 0.1em 0.25em;
+  border: 2px solid black; 
+ 
+}
+#morethaneight {
+  display: inline-block;
+  border-radius: 0.25em;
+  padding: 0.0em 0.25em 0.1em 0.25em;
+  border: 2px solid black; 
+
+}
+.UNChecked {
+  /*background: red;*/
+  /*background: 	rgb(255, 179, 179); */
+  background: rgb(204, 0, 0);
+}
+.matchChecked {
+  background: green;
+}
+
+
+</style>
+</head>
+<body>
+	<h1> Account Activation </h1> 			 
+	<div id ="AppContainer"> 
+		<div id = "LoginApp">
+			<form onsubmit = "return ValidateForm(event);" accept-charset = "utf-8" method = "post" >
+				<legend> Set Password For Employees </legend>		
+        <p>
+          Passwords must match.
+          Please create a strong password!     
+          You should use atleast 4 characters from each of the following categories.
+          <ul>          
+            <li>Uppercase characters (A-Z) </li>
+            <li>Lowercase characters (a-z)</li>
+            <li>Digits (0-9)</li>
+            <li>Special characters (~!@#$%^&*_-+=`|\(){}[]:;"'<>,.?/)</li>
+            <li>White space character (The space bar)</li>
+          </ul>               
+        </p>
+        <p>          
+          No other characters accepted. Must have more that 8 characters in length.
+        </p>
+        <div>
+        <% if ( success_msg ) { %> <div> <%= success_msg %> </div> <% } %>			
+        <% if ( error_msg) { %> <div> <%= error_msg %> </div> <% } %>
+        <% if (error) { %> <div> <%= error %> </div> <% } %>			
+        </div>		
+        <div class="form-group">
+          <br />
+          <label For ="Password"> Password </label>
+          <input type = "password" id="password1" name = "password1" maxLength = "21" autofocus></input>
+        </div>						
+        <div class="form-group">
+          <br />
+          <label For ="Password"> Retype Password </label>
+          <input type = "password" id="password2" name = "password2" maxLength = "21" ></input>
+        </div>						
+        <input type = "text" id="token" name = "token" value = "<%= theToken %>" ></input>
+        <br />    
+        <div class="form-group">
+          More that 8 characters in length? <span id = "morethaneight" class = 'UNChecked'> &#9744 </span>
+        </div>                
+        <div class="form-group">
+          Passwords match? <span id = "match" class = 'UNChecked'> &#9744 </span>
+        </div>                
+        <div class="form-group">
+          <input type = 'Submit' id = 'submit' value = 'Set Password' readOnly></input>
+        </div>
+        
+		</form>
+		</div>
+	</div>		 	
+</body>
+<script type = "text/javascript">
+
+
+  var token = document.getElementById("token");
+  var txtPassOne = document.getElementById("password1");
+	var txtPassTwo = document.getElementById("password2");
+	var matchCheck = document.getElementById("match");
+  var morethaneight = document.getElementById("morethaneight");
+  var submit = document.getElementById("submit");
+  
+  submit.disabled = true;
+	var checkedSymbol = " &#9745 ";
+	var unCheckedSymbol = " &#9744 ";
+
+	txtPassOne.addEventListener("input", function(event) {				
+		var x = checkPasswordMatch();		
+    var y = checkPasswordmorethaneight();
+		if(x == true && y == true ){
+      submit.disabled = false;         
+    } else {
+      submit.disabled = true;                
+    }        
+	});
+	txtPassTwo.addEventListener("input", function(event) {					 
+		var x = checkPasswordMatch();
+    var y = checkPasswordmorethaneight();
+    if(x == true && y == true ){      
+      submit.disabled = false;            
+    } else {
+      submit.disabled = true;          
+    }        
+	});
+  
+  function checkPasswordMatch(){
+    var p1 = txtPassOne.value;
+    var p2 =  txtPassTwo.value;
+    var f = false;
+    if ( p1 == p2 && p1 != "" ) {
+      matchCheck.classList.remove("UNChecked");
+      matchCheck.setAttribute("class", "matchChecked");      
+			matchCheck.innerHTML = checkedSymbol; 
+      f = true;
+    } else {
+      matchCheck.classList.remove("matchChecked");
+      matchCheck.setAttribute("class", "UNChecked");
+			matchCheck.innerHTML = unCheckedSymbol;
+      f = false
+    }
+    return f;
+  }
+	
+  function checkPasswordmorethaneight(){
+    var p1 = txtPassOne.value;
+    var p2 =  txtPassTwo.value;
+    var f = false;
+    if(p1.length > 8 ){
+      morethaneight.classList.remove("UNChecked");
+      morethaneight.setAttribute("class", "matchChecked");      
+			morethaneight.innerHTML = checkedSymbol; 
+      f = true;
+    } else {
+      morethaneight.classList.remove("matchChecked");
+      morethaneight.setAttribute("class", "UNChecked");
+			morethaneight.innerHTML = unCheckedSymbol;
+      f = false;
+    }
+    return f;
+  }
+  
+  
+  
+  
+  function ValidateForm( event ) {
+    event.preventDefault();
+    var pass = false;    
+    if (checkPasswordmorethaneight()) {
+      if(checkPasswordMatch()) {
+        var p1 = txtPassOne.value;            
+        var t = token.value;
+        try {
+            var inputarr = {};
+                inputarr['P'] = p1; 
+                inputarr['T'] = t;
+            var jsonItem = JSON.stringify( inputarr );
+            var destination = "/activation/doEmployeeActivation";
+            
+            doSubmit(jsonItem, destination, finish);
+            function doSubmit(jsonpackage, url, cb) {
+              return fetch(url, {
+                method: 'post',
+                body: jsonpackage,
+                headers:{
+                  'Accept': 'application/json',
+                  'Content-Type': 'application/json',
+                },
+              }).then(checkStatus)
+                .then(getText)
+                .then(cb)
+                .catch((error) => console.log(error.message));
+            }
+  
+            function checkStatus(response) {
+              if (response.status >= 200 && response.status < 300) {
+                return response;
+              } else {
+                const error = new Error(`HTTP Error ${response.statusText}`);
+                error.status = response.statusText;
+                error.response = response;
+                console.log(error);
+                throw error;
+              }
+            }
+            function getText(response) {
+              return response.text();
+            }
+            function finish(response){
+              if(response == 'ACCOUNT ACTIVATED') {
+				var success_msg = '<div id = \"LoginApp\"> <h2>Account activation was successful. You may now login.</h2> <a href = \"http://localhost:3005\" ><button>Go To Login</button></a>	</div>';
+				document.getElementById("AppContainer").innerHTML = success_msg;
+			  } else {
+				var computer_error = '<div id = \"LoginApp\"> <h2> Server ran into a computer problem. Account was not activated. </h2></div>';
+				document.getElementById("AppContainer").innerHTML = success_msg;
+			  }
+            }
+        } catch (e) {
+          console.log("fetch error: "+e);
+          this.props.crash();
+        }                       
+      }
+    }    
+  }
+			
+
+</script>
+</html>

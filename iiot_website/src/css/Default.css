@@ -1,59 +1,13 @@
-    /* Style all font awesome icons */
-  
-  #SocialMediaIcons {
-    text-align: center;
-  }
-  
-  .fa {
-      padding: 1em;
-      font-size: 1em;
-      opacity: 0.7;
-      text-align: center;
-      text-decoration: none;
-      border-radius: 50%;
-      margin: 0.3em;
-      
-  }
-  .fa:hover {
-      opacity: 1;
-      border: 1px solid white;
-  }
-  .fa-facebook {
-      background: #3B5998;
-      color: white;
-  }
-  .fa-twitter {
-      background: #55ACEE;
-      color: white;
-  }
-  .fa-linkedin {
-      background: #007bb5;
-      color: white;
-  }
-  .fa-instagram {
-      background:rgb(252, 73, 130);
-      color: white;
-  }
-  /* Styles for font awesome icons */
-
-
-
 
 
 body {
-  /* background-image: url('..//images/circuit_board_edited.jpg'); */
-  /*background-repeat: repeat; */
-  /* background-image: url('..//images/SheetMetal.jpg');
-  background-repeat: repeat;*/
   background: white;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  /*font-family: Courier;*/
-  font-family: "Avenir", Helvetica, sans-serif;
+  font-family: "Arial", "Avenir", Helvetica, sans-serif;
   color: white;
   padding: 0;  
   margin: 0;
- 
 }
 
 nav {
@@ -63,8 +17,8 @@ nav {
   margin-bottom: 1em;
   display: block;
 }
-nav a {   
-  
+
+nav a {     
   border-radius: 1em;
   padding-left: 2%;
   padding-right: 2%;
@@ -80,6 +34,7 @@ nav a {
   border-radius: 0.3em;
   display: inline-block;
 }
+
 nav a:hover {
   background: rgb( 77, 0, 38  );
   color: rgb(232, 234,240 );
@@ -98,9 +53,6 @@ nav a:hover {
   color: white;
 }
 
-
-
-
 #fdiv {
   display: inline-block;
   text-align: left;
@@ -109,12 +61,8 @@ nav a:hover {
   margin-right: 2em;
   vertical-align: top;
 }
- 
 
-
-header { 
-  /* background: rgb(195, 195, 195); */
-  /*background-color: rgb( 0, 0, 0, 0.7);*/
+header {  
   background-color: black;
   border-bottom: 2px solid rgb(22,22,22);
   margin: 0;
@@ -126,47 +74,36 @@ header {
 }
 
 main {
-  /* background: rgb( 195, 195, 195); */
-  /* border: 2px solid black; */
-   /* background-color: rgb( 0, 0, 0, 0.3); */
-/*   background-color: rgb(0, 0, 0, 0.3); */
-  /* background: white; */
   overflow: hidden;
   color: black;
   min-height: 70vh;
   margin:0;
-  text-align: left;
-  
+  text-align: center;  
   display: block;
   float: top;
+  position: relative;
 }
 
 footer {
-  /*background:hsl(240, 100%, 25%);*/
-  /* background-color: rgb( 0, 0, 0, 0.7); */
-  /* background-color: rgb(22,22,22, 0.7); */
   background-color: black;
   border-top: 2px solid rgb(22,22,22);
-  margin:0;
-  /*border: 2px solid black;*/
+  margin:0;  
   color: white;
   min-height: 10vh;
   text-align: left;
   overflow: hidden;
   padding: 1em;
   display: block;
-  float: top;
-  
+  float: top;  
 }
+
 footer h4 {
   margin-top: 0em;
-
 }
+
 .signature {
   float: right;
-  font-family: "Times New Roman";
-  font-weight: bold;
-  
+  font-family: "Times New Roman";  
   position: relative;
   bottom: 0;
   right: 0;
@@ -177,32 +114,105 @@ footer h4 {
   display: inline-block;
   color: white;
   text-decoration: none;  
-  vertical-align: top;
-  
+  vertical-align: top;  
   padding-bottom: 0.5em;
 }
+
 #homeLink:hover {
   text-decoration: underline;
-  color: rgb( 255, 153, 51  );
-  
+  color: rgb( 255, 153, 51  );  
 }
-
 
 #MohawkCollegeLink img:hover {  
   cursor: pointer;
-
 }
+
 #MohawkCollegeLink {
   overflow: hidden;
   display: inline-block;
   margin-left: 1em; 
   margin-top: 1em; 
   margin-right: 1em;
-  margin-bottom: 0.25em;
-  
+  margin-bottom: 0.25em;  
 }
 
 header h1 {
   margin-bottom: 0;
   font-size: 2rem;
 }
+
+
+ 
+#Document {
+  display: inline-block;
+  line-height: 1.4;
+  text-align: left;
+  max-width: 60em;
+  text-align: left;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+  padding-top: 1em;
+  padding-bottom: 0.3em;
+}
+
+
+
+
+ 
+
+
+.Project_Img_Header {      
+	display: block;
+    border: 5px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    position:relative;    
+    margin: 0.3em;
+    background: black;
+    max-height: 70vh;
+}
+.Project_Img_Header img {
+    height: auto;
+    width: 100%;    
+    display: block;
+    position: relative;    
+}
+
+
+.section_Img_Continer {  
+  max-width: 98%;
+  width: 18rem; 
+  float: right;
+  display: block;
+  border: 5px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+  position:relative;
+  display: block;
+  margin: 0.3em;
+  background: black;
+}
+.section_Img_Continer img {
+  height: auto;
+  width: 18rem;    
+  display: block;
+  position: relative;
+  
+}
+
+.textImg {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background-color: rgb(22,22,22, 0.75);
+  border-top: 3px solid rgb(22,22,22, 0.5);
+  width: 100%;
+  height: 20%;
+  font-size: 1em;  
+  display: block;
+  text-align: left;
+  padding: 0.2em;
+  margin: 0;
+}
+
+ 

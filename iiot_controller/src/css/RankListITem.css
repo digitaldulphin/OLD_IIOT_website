@@ -1,0 +1,40 @@
+
+.RankListITem  {
+    border: 1px solid #006666;
+    background: #e6ffff;
+    margin-bottom: 2em;
+    position: relative;
+    
+}
+
+.RankListITem #del {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+}
+
+
+.ImportanceList {
+    display: inline-block;
+    width: 30%;
+}
+
+.upperblock {
+    display: block;
+    margin-bottom: 0.5em;
+    
+    
+}
+
+.inlineBlock {
+    display: inline-block;
+}
+
+.widthSeventy {
+    width: 70%;
+}
+
+.verticalAlignTop {
+    vertical-align: top;
+}

@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-
+import MYImg from './MYImg.js';
 
 class TheFooter extends Component {
-  constructor(props) {
-    super(props);
-
-  }
-  render() {
+	render() {
+	  var ImageName = 'mohawkLogoo.png';
+	  var img = <MYImg ImageName = {ImageName} ImageDescription = {'Mohawk College Logo'} />;
+		
     return (
       <footer>
         <div id = 'fdiv'>
@@ -23,7 +22,7 @@ class TheFooter extends Component {
       
         <div id = 'fdiv'>          
             <a href = 'https://www.mohawkcollege.ca/' id = 'MohawkCollegeLink' title = "Go to Mohawk College Home Page." >
-              <img src = {require('../images/mohawkLogo.png')} alt="Mohawk College logo." height="50"  ></img>
+			{img}
             </a>
         </div>
         <div id = 'fdiv' className='signature'>          

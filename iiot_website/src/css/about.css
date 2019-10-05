@@ -1,31 +1,8 @@
 
-
-
-
-#About {
+#AboutContent {
     display: block;
     text-align: center;
     float: left;
-
+    margin-bottom: 5em;
 }
-
-
-#Document {
-    display: inline-block;
-    line-height: 1.4;
-    text-align: left;
-    max-width: 60em;
-    text-align: left;
-
-    padding-left: 0.7em;
-    padding-right: 0.7em;
-    padding-top: 1em;
-    padding-bottom: 0.3em;
-}
-
-
-#gooseimg {
-    height: auto;
-    width: 20em;
-    float: right;
-}
+ 

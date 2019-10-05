@@ -1,88 +1,32 @@
 import React, { Component } from 'react';
 import '../css/projects.css';
-
+import MYImg from './MYImg.js';
 import {
-    BrowserRouter as Router,
-    Route,
-    Link,
-    Redirect,
-    Switch,
-  } from 'react-router-dom';
+    BrowserRouter as Router, Link,
+} from 'react-router-dom';
   
 
 class Projects extends Component {
-  constructor(props) {
-    super(props);
-
-  }
   render() {
-    return (
-        <div id = 'content'>
-
-            <h2> Projects </h2>
-        
-            <div id = ''>
-
-
-                <Link to = '/Project_1' className = 'Project'  >
-                    <img src = {require('../images/goose.jpg')}  alt = 'image of lab or building' ></img>                     
-                    <div className = 'ProjText'> 
-                        <h3>Project dog tracker</h3>                           
-                        <p>This project is all about tracking dogs at a farm.</p>
-                    </div>
-                </Link>    
-
-
-                <Link  to = '/Project_2' className = 'Project' >
-                    <img src = {require('../images/goose.jpg')}   alt = 'image of lab or building' ></img> 
-                    
-                    <div className = 'ProjText'> 
-                        <h3>Weather Monitor</h3>                    
-                        <p>This project is all about monitoring the weather.</p>
-                    </div>
-                </Link>
-
-            
-                <Link to = '/Project_1' className = 'Project'  >
-                    <img src = {require('../images/goose.jpg')}  alt = 'image of lab or building' ></img>                     
-                    <div className = 'ProjText'> 
-                        <h3>Project dog tracker</h3>                           
-                        <p>This project is all about tracking dogs at a farm.</p>
-                    </div>
-                </Link>    
-
-
-                <Link  to = '/Project_2' className = 'Project' >
-                    <img src = {require('../images/goose.jpg')}   alt = 'image of lab or building' ></img> 
-                    
-                    <div className = 'ProjText'> 
-                        <h3>Weather Monitor</h3>                    
-                        <p>This project is all about monitoring the weather.</p>
-                    </div>
-                </Link>
-                
-                <Link to = '/Project_1' className = 'Project'  >
-                    <img src = {require('../images/goose.jpg')}  alt = 'image of lab or building' ></img>                     
-                    <div className = 'ProjText'> 
-                        <h3>Project dog tracker</h3>                           
-                        <p>This project is all about tracking dogs at a farm.</p>
-                    </div>
-                </Link>    
-
-
-                <Link  to = '/Project_2' className = 'Project' >
-                    <img src = {require('../images/goose.jpg')}   alt = 'image of lab or building' ></img> 
-                    
-                    <div className = 'ProjText'> 
-                        <h3>Weather Monitor</h3>                    
-                        <p>This project is all about monitoring the weather.</p>
-                    </div>
-                </Link>
-
+    var arry = this.props.projs; 
+    var prolinks = [];    
+    prolinks = arry.map( (p, i) => 
+        <Link to = { `/Project_${i}`}  key = {i}  className = 'Project'  >            
+			<MYImg ImageName = {p.img.ImageName} ImageDescription = {p.img.ImageDescription} />			
+            <div className = 'ProjText'> 
+                <h3>{p.Title}</h3>                           
+                <p>{p.Description}</p>
             </div>
+        </Link>   
+    ); 
+    return (
+        <div id = 'ProjectsPage'>
+            <h2> Projects </h2>            
+            {prolinks}            
         </div>
     );
   }
 }
+
 
 export default Projects;

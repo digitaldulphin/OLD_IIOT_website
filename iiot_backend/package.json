@@ -1,0 +1,39 @@
+{
+  "name": "iiot_backend",
+  "version": "1.0.0",
+  "description": "",
+  "proxy": "http://localhost:3005/",
+  "main": "server.js",
+  "scripts": {
+    "start": "concurrently \"npm run backend\" \"npm run website\" \"npm run controller\"  ",
+    "backend": "nodemon server --ignore 'AppData.json'",
+    "website": "cd ../iiot_website/ && npm start ",
+    "controller": "cd ../iiot_controller/ && npm start "
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^8.1.0",
+    "ejs": "^2.6.1",
+    "email-validator": "*",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.3.0",
+    "flash": "^1.1.0",
+    "formidable": "^1.2.1",
+    "jsonwebtoken": "^8.5.1",
+    "nodemailer": "*",
+    "passport": "^0.4.0",
+    "passport-http": "^0.3.0",
+    "passport-local": "^1.0.0",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "simple-oauth2": "^2.5.1",
+    "sqlite3": "^4.0.2",
+    "xmlhttprequest": "*"
+  }
+}

@@ -2,23 +2,28 @@ import React, { Component } from 'react';
 import '../css/people.css';
 
 class People extends Component {
-  constructor(props) {
-    super(props);
-
-  }
   render() {
+	var PeopleList = this.props.PeopleInfo.PeopleList.map( (p, i) => 
+		<div className = {'peopleListItemLevel_'+p.ImportanceLevel } key={i}>
+			<span> {p.Title} </span>: <span> {p.Name} </span>
+		</div>	
+	);
+	var SponsorList = this.props.PeopleInfo.SponsorsList.map( (s, i) => 
+		<div className = {'sponsorListItemLevel_'+s.ImportanceLevel } key={i}>
+		  	<span> {s.Name} </span>
+		</div>	
+	);
     return (
-        <div id = 'content'>
-     	<h2> People </h2>
-		<p>
-			The People page.
-		</p>
-		<p>
-			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas veritatis laboriosam officiis voluptatem necessitatibus obcaecati quia dicta. Vel laborum earum architecto consectetur, dolore modi. Numquam quia culpa nobis omnis earum.
-		</p>
-		<p>
-			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas veritatis laboriosam officiis voluptatem necessitatibus obcaecati quia dicta. Vel laborum earum architecto consectetur, dolore modi. Numquam quia culpa nobis omnis earum.
-		</p>
+        <div id = 'People_Page'>
+     		<h2> People </h2>
+		 	<div>
+				{PeopleList}
+			</div>
+			<br /><br />
+			<h2> Sponsors </h2>
+			<div>
+				{SponsorList}
+			</div>
         </div>
     );
   }

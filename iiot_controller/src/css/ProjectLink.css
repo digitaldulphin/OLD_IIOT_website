@@ -1,0 +1,63 @@
+ 
+/* ...Media query... */
+@media screen and (max-width: 777px) {  	
+    .ProjectLink {
+        display: block;
+        border: 1px solid black;    
+        margin-bottom: 2em;
+        margin-right: 2em;            
+        border: 1p solid black;
+        z-index: 0;            
+        height: 20em;
+        position: relative;
+        overflow: hidden;
+    }
+}
+@media screen and (min-width: 777px) {          
+    .ProjectLink {
+        display: inline-block;
+        border: 1px solid black;    
+        margin-bottom: 2em;
+        margin-right: 2em;    
+        vertical-align:  top;            
+        border: 1p solid black;
+        z-index: 0;    
+        min-width: 30%;
+        height: 20em;
+        position: relative;
+        overflow: hidden;
+    }
+}
+
+/* disabled 
+.ProjectLink:hover {
+    background:rgb( 77, 0, 38  );
+    box-shadow: 10px 10px 5px rgb( 11,11,11 );    
+    color:rgb( 190, 190, 190 );
+    cursor: pointer;
+} */
+
+.proJectLinkImg {   
+    z-index: 1;
+    width: auto;
+    height: 100%;
+    display: block; 
+    background: black;  
+    color: white;
+}
+
+.ProjText {
+    position: absolute;
+    bottom: 0;
+    color: white;    
+    background-color: rgb(22,22,22, 0.5);
+    border: 2px solid rgb(22,22,22, 0.5);
+    width: 100%;
+    min-height: 50%;
+    font-size: 1em;  
+    display: block;
+    text-align: left;
+    padding: 0.2em;
+    margin: 0;   
+    cursor: pointer; 
+}

@@ -1,10 +1,21 @@
 
 
 
-#content {
+#People_Page {
     max-width: 60em;
     display: inline-block;
     line-height: 1.4;
-    text-align: left;
-    
+    text-align: left;   
 }
+
+.peopleListItemLevel_1 { font-size: 1.4em;  font-weight: bold; }
+.peopleListItemLevel_2 { font-size: 1.17em; font-weight: 550; }
+.peopleListItemLevel_3 { font-size: 1.08em; }
+.peopleListItemLevel_4 { font-size: 1em; }
+.peopleListItemLevel_5 { font-size: 0.9em; }
+
+.sponsorListItemLevel_1 { font-size: 1.4em; font-weight: bold; }
+.sponsorListItemLevel_2 { font-size: 1.17em; font-weight: 550; }
+.sponsorListItemLevel_3 { font-size: 1.08em; }
+.sponsorListItemLevel_4 { font-size: 1em; }
+.sponsorListItemLevel_5 { font-size: 0.9em; }

@@ -1,21 +1,12 @@
-
-
 import React, { Component } from 'react';
-import FullCalendar from '@fullcalendar/react'
-import dayGridPlugin from '@fullcalendar/daygrid'
-
-
-import './main.scss' // webpack must be configured to do this
+import FullCalendar from '@fullcalendar/react';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import './main.scss';
 
 class MyCalendar extends Component {
-  constructor(props) {
-    super(props);  
-  }
   render() {	
     var outter = { fontSize:'14px' };
     var container = { margin: "3em 0 5em 0", height: "80vh",  maxWidth: '2200px' };
-  
-
     return (
       <div style={outter}>
         <div style={container} >
@@ -28,8 +19,7 @@ class MyCalendar extends Component {
                   right: ''
                 }}
                 events={  this.props.events }
-                height='parent'
-      
+                height='parent'      
               />
         </div>
       </div>

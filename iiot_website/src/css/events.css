@@ -1,10 +1,50 @@
 
 
-
-#content {
-    max-width: 50em;
+#Events_Page {
+    max-width: 70em;
     display: inline-block;
     line-height: 1.4;
-    text-align: left;
-    
+    text-align: left;    
 }
+
+#eventslist li {
+    list-style-type: none;
+}
+
+#eventslist .eTitle { 
+    display: block;
+    margin-top: 1em;
+    padding: 0.75em;
+    cursor: pointer;
+    width: 60%;
+    min-width: 270px;
+}
+ 
+#eventslist .eDescription {
+    color: rgb( 77, 0, 38 );
+    background: rgb(232, 234,240 );
+    display: block;
+    padding: 0.75em;
+    width: 60%;
+    min-width: 270px;
+}
+
+.titleHover {
+    background: rgb( 77, 0, 38 );
+    color: rgb(232, 234,240 );
+}
+
+.nottitleHover {
+    color: rgb( 77, 0, 38 );
+    background: rgb(232, 234,240 );
+}
+
+.Atriangle  {
+    padding: 0.2em;
+    float: right;
+    margin-left: 1em;
+    display: block;
+    font-family: 'consolas';
+}
+  
+
