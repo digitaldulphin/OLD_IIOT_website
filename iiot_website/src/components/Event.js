@@ -9,7 +9,7 @@ class Event extends Component {
     };
   }
   showDescription = () => {
-    if ( this.state.des == true ) {
+    if ( this.state.des === true ) {
       this.setState({ des:false  });
     } else {
       this.setState({ des:true });
@@ -23,7 +23,7 @@ class Event extends Component {
     var tUp = '△'; var tDown = '▽';
     var AtriangleCLS = 'Atriangle';
 
-    if (this.state.des == true) {
+    if (this.state.des === true) {
         AtriangleCLS = 'Atriangle titleHover';
         des = (
           <div>
@@ -38,7 +38,7 @@ class Event extends Component {
         );
     } else {
       var titleCLS = '';
-      if (this.state.titleHov == true) {
+      if (this.state.titleHov === true) {
         titleCLS = 'eTitle titleHover';
         AtriangleCLS = 'Atriangle titleHover';
       } else {

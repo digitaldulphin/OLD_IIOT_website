@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {
-  BrowserRouter as Router,
-  NavLink,
+  BrowserRouter as NavLink,
 } from 'react-router-dom';
 
 

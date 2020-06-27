@@ -2,30 +2,23 @@ const sqlite3 = require("sqlite3").verbose();
 const fs = require('fs');
 const BCRYPT = require('bcryptjs');
 const MYHELPERS = require('./myhelpers.js');
- 
 const  adminLoginsfile   = './admins/adminLogins.db';
 const waitingAccounts      = './waitingAccounts/waitingAccounts.db';
   
-
-function plzdomydbsetup(  ) {
-	/** 
-	 * Create Database for employee Logins.
-	 * 
-	 */
-	 
+/** Create the database **/
+function plzdomydbsetup(  ) { 
 	fs.access(adminLoginsfile, fs.constants.R_OK | fs.constants.W_OK, (err) => {
 		if(!err)  { console.log(' Database adminLogins exists going to delete now. ');
 			fs.unlink(adminLoginsfile, (err) => { if (err) { console.log("Failed to delete database:"+err); } });
 		} else { console.log(' Database adminLogins does not exist...'); }
+		
 		var db = new sqlite3.Database(adminLoginsfile);
 		db.serialize(function() {
-			///** Begin running sql statements to create DB for Editor Accounts. 
 			var DROPtableStatement= "DROP TABLE IF EXISTS adminLogins;";
 			db.run(DROPtableStatement);
 			var CREATEtableStatement = "CREATE TABLE adminLogins (id INTEGER PRIMARY KEY AUTOINCREMENT, Firstname TEXT, Lastname TEXT, email TEXT, Password TEXT, salt TEXT)";
 			db.run(CREATEtableStatement);
 			console.log(" Database created.");
-			///** Need to use a recusive method to insert a record in to Editor Accounts because the password needs to be converted into a hashed password.  
 			var Firstname = "Norman"; var Lastname = "Potts"; var email = "storminnormanpotts@hotmail.com"; var password  = "12341234";
 			try { DoInsertonEditorDB( Firstname, Lastname, email, password, false, null, db  ); }catch(e)	{ console.log(e);  }
 		});
@@ -72,7 +65,7 @@ function plzdomydbsetup(  ) {
 function removeOldtokens() { console.log('removeOldtokens');
   var SELECTSTATEMENT = "SELECT * FROM waitingAccounts;";	
 	db = new sqlite3.Database(waitingAccounts);   		
-	db.all(SELECTSTATEMENT,[],(err, rows ) => {	if (err) { console.log("error at get /db.all Select  "); throw err; }	
+	db.all(SELECTSTATEMENT,[],(err, rows ) => {	if (err) { console.error("error at get /db.all Select  "); throw err; }	
     db.close();
     var now = new Date();  var toremove = [];
     if ( rows.length > 0) {

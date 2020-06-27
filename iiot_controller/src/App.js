@@ -9,7 +9,8 @@ import ModalAlert from './components/ModalAlert.js';
 import {
   BrowserRouter as Router,
 } from 'react-router-dom';
-import { throwStatement } from '@babel/types';
+// eslint-disable-next-line
+import { throwStatement } from '@babel/types';  
 
 
 class App extends Component {

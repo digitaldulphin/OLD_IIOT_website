@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import uuid from 'uuid';
 import DisplayEditText from '../DisplayEditText.js';
-import { conditionalExpression } from '@babel/types';
+
 
 
 
@@ -101,7 +101,7 @@ render() {
 					pview.push(
 						<li key = {uuid.v4()} > 
 						<p> {theParr[i].txt}</p>
-						<img src = { LeImaage.src  }/>
+				        <img src = { LeImaage.src  }  alt = {theParr[i].txt} />
 						</li> 
 					);
 					pview.push(

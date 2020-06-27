@@ -11,10 +11,10 @@ function POST(  thing, destination, cb  ) {
     var jsonItem = JSON.stringify( thing );
     var http = new XMLHttpRequest();
     http.onreadystatechange = function() {
-        if (http.readyState == 4 && http.status == 200) {
+        if (http.readyState === 4 && http.status === 200) {
             
             var data = http.responseText;
-            if (data[0] == '<') {
+            if (data[0] === '<') {
                 window.location.replace("/Login/");
             } else {
                cb(data);
@@ -34,7 +34,7 @@ function POST(  thing, destination, cb  ) {
 function GET( destination, cb ) {
     var http = new XMLHttpRequest();
     http.onreadystatechange = function() {
-        if (http.readyState == 4 && http.status == 200) {            
+        if (http.readyState === 4 && http.status === 200) {            
             var data = http.responseText;                        
             cb(data);            
         }

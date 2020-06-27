@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Paragrapheditor from './Paragrapheditor.js';
-import { throws } from 'assert';
+// eslint-disable-next-line
+import { throws } from 'assert'; 
 import Imgcontroller from '../imgController/Imgcontroller.js';
 import uuid from 'uuid';
 import DisplayEditText from '../DisplayEditText.js';
@@ -43,7 +44,7 @@ class SectionEditor extends Component {
                 ImageDescriptionChange = {this.props.ImageDescriptionChange} 
                 RemoveImage = {this.props.RemoveImage}
                 ChangeImage = {this.props.ChangeImage}
-                ImageDescriptionChange = {this.props.ImageDescriptionChange}
+                 
                 />				
             <div id = 'listParagrapheditors' >
              {paraEditors}

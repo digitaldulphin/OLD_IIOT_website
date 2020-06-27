@@ -4,7 +4,7 @@ import TheHeader from './components/TheHeader.js';
 import TheMain from './components/TheMain.js';
 import caller from './caller.js';
 import {
-  BrowserRouter as Router, Route, Link, Redirect, Switch,
+  BrowserRouter as Router,
 } from 'react-router-dom';
 
 

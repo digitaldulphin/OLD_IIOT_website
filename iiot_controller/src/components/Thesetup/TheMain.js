@@ -8,12 +8,13 @@ import Manageevents from '../pages/Manageevents.js'
 
 
 import {
-  BrowserRouter as Router,
+  BrowserRouter as 
   Route,
   Redirect,
   Switch,
 } from 'react-router-dom';
-import { throwStatement } from '@babel/types';
+// eslint-disable-next-line
+import { throwStatement } from '@babel/types';  
 
 
 

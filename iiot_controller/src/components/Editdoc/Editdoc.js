@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import SectionEditor from './SectionEditor.js';
-import caller from '../../caller.js'; 
 import uuid from "uuid";
 
 

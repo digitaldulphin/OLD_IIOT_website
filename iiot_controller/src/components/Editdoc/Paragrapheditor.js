@@ -34,7 +34,7 @@ class Paragrapheditor extends Component {
       </div>
     );
 
-    if (this.state.edit == false ) {
+    if (this.state.edit === false ) {
       outputterer = displayP; 
     } else {
       outputterer = editor;

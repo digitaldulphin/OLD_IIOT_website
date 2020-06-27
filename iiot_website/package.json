@@ -1,23 +1,21 @@
 {
   "name": "iiot_website",
   "version": "0.1.0",
-  "proxy": "http://localhost:3005/",
-  "homepage":"http://localhost:3005/", 
   "private": true,
   "dependencies": {
     "@fullcalendar/core": "^4.3.1",
     "@fullcalendar/daygrid": "^4.3.0",
     "@fullcalendar/react": "^4.3.0",
     "@fullcalendar/timegrid": "^4.3.0",
+    "enzyme": "3.1.0",
+    "enzyme-adapter-react-16": "1.0.1",
     "moment": "^2.24.0",
     "react": "^16.8.6",
     "react-big-calendar": "^0.22.0",
     "react-calendar": "^2.19.1",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.1",
-    "enzyme": "3.1.0",
-    "enzyme-adapter-react-16": "1.0.1",
+    "react-scripts": "^3.4.1",
     "react-test-renderer": "16.1.1"
   },
   "scripts": {
@@ -42,7 +40,7 @@
     ]
   },
   "devDependencies": {
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.14.1",
     "sass-loader": "^7.3.1"
   }
 }

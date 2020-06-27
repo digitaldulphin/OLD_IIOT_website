@@ -2,7 +2,6 @@
   "name": "iiot_backend",
   "version": "1.0.0",
   "description": "",
-  "proxy": "http://localhost:3005/",
   "main": "server.js",
   "scripts": {
     "start": "concurrently \"npm run backend\" \"npm run website\" \"npm run controller\"  ",

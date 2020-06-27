@@ -50,7 +50,7 @@ class Imgcontroller extends Component {
 				</div> 
 			); 
 		} else {          						
-				var impat = '../../../../iiot_backend/images/'+this.props.img.ImageName+'';								
+											
 				var iname = this.props.img.ImageName;
 				var descip = this.props.img.ImageDescription;
 				var An_Img = <MYImg ImageName = {iname} ImageDescription = {descip} />;		        

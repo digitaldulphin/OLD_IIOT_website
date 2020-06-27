@@ -41,7 +41,7 @@ class DisplayEditText extends Component {
         </span>
     );
 
-    if (this.state.edit == false ) {
+    if (this.state.edit === false ) {
         show = Display; 
     } else {
         show = Edit;

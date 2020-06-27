@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../css/projects.css';
 import MYImg from './MYImg.js';
 import {
-    BrowserRouter as Router, Link,
+    BrowserRouter as Link,
 } from 'react-router-dom';
   
 

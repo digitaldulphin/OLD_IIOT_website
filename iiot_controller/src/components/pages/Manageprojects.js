@@ -32,7 +32,7 @@ class Manageprojects extends Component {
 	}
 	CreateAnewPRoe = () => {
 		var arryy =  this.props.ProjeInfo;
-		var L = arryy.length; 
+		 
 		var pojrrjj = {
 			route: 'Initial_Project',
 			title: 'Inital Project',

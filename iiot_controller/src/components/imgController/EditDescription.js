@@ -4,7 +4,7 @@ import DisplayEditText from '../DisplayEditText.js';
 
 class EditDescription extends Component {  
   render() {
-    var ImageName = this.props.img.ImageName;
+
     var ImageDescription = this.props.img.ImageDescription; 
     return ( 
         <div >

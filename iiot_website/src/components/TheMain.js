@@ -4,13 +4,10 @@ import About from './About.js';
 import Events from './Events.js';
 import People from './People.js';
 import Projects from './Projects.js';
-  import Project from './Project.js';
+import Project from './Project.js';
 
 import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  NavLink,
+  BrowserRouter as Route,
   Redirect,
   Switch,
 } from 'react-router-dom';
@@ -21,7 +18,7 @@ class TheMain extends Component {
     var PeopleInfo = this.props.AppData.PeoplePage;
     var EventList = this.props.AppData.EventList;   
     var projs = this.props.AppData.projects;      
-    var rou = [];
+   
     var rou = projs.map( (p, i) => 
       <Route key = {i} path={ `/Project_${i}` } render={(props) => <Project {...props}  p = {p} />} />
     );
